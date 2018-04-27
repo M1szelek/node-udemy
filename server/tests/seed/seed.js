@@ -37,17 +37,15 @@ const todos = [{
 }];
 
 const populateTodos = (done) => {
-  //done();
   Todo.remove({}).then(() => {
-   // done();
     return Todo.insertMany(todos);
   }).then(() => done()).catch((e) => done(e));
 };
 
 const populateUsers = (done) => {
- // done();
+
   User.remove({}).then(() => {
-   // done();
+
     var userOne = new User(users[0]).save();
     var userTwo = new User(users[1]).save();
 

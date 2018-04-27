@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/server.js",
-    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --exit server/**/*.test.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --timeout 15000 --exit server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
@@ -17,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "crypto-js": "^3.1.9-1",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "jsonwebtoken": "^8.2.0",
